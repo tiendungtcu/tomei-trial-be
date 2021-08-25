@@ -1,0 +1,23 @@
+{
+    "development": {
+        "username": "root",
+        "password": "tomei",
+        "database": "tomeidb",
+        "host": "localhost",
+        "dialect": "mysql"
+    },
+    "test": {
+        "username": "root",
+        "password": "tomei",
+        "database": "tomeidb",
+        "host": "localhost",
+        "dialect": "mysql"
+    },
+    "production": {
+        "username": "root",
+        "password": "tomei",
+        "database": "tomeidb",
+        "host": "localhost",
+        "dialect": "mysql"
+    }
+}

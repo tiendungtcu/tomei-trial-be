@@ -1,0 +1,25 @@
+version: "3.8"
+services:
+  mariadb:
+    image: mariadb:latest
+    container_name: mariadb
+    restart: always
+    environment:
+      MARIADB_USER: tomei
+      MARIADB_ROOT_PASSWORD: tomei
+      MARIADB_DATABASE: tomeidb
+    ports:
+      - 3306:3306
+    volumes:
+      - db_data:/var/lib/mysql
+  adminer:
+    image: adminer:latest
+    container_name: adminer
+    environment:
+      ADMINER_DEFAULT_SERVER: mariadb
+      MARIADB_ROOT_PASSWORD: tomei
+    restart: always
+    ports:
+      - 7777:8080
+volumes:
+  db_data:
