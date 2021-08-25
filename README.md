@@ -1,7 +1,5 @@
 # IMFO Backend API
 
->Typescript v2 project with NodeJS + Express + Sequelize ORM. :heart:
-
 ## Table of Contents
 - [Tech]
 - [Introduction]
@@ -24,7 +22,7 @@ Our app directory consists on the following folders
 |---|---|
 | app/config/  | Contains all of your environments, database configuration and middleware configuations. |
 | app/controllers/  | Contains all of our endpoints defination. |
-| app/db/migrations  | Your database migrations scripts. Keep this files in Javascript and run `npm run db:migrate` to migrate your database schema. |
+| app/db/migrations  | Your database migrations scripts. Keep this files in Javascript and run `DATABASE_URL=mysql://root:tomei@localhost:3306/tomeidb npm run db:migrate` to migrate your database schema. |
 | app/models/ | Sequelize entities. |
 | app/routes/ | Our endpoints listing. |
 

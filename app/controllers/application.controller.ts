@@ -4,7 +4,6 @@ let model = ''
 class ApplicationController {
   errors: any
   constructor(m) {
-    console.log(m)
     model = m
   }
   _create(req, res, options = {}, callback = null) {

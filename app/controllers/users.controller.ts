@@ -16,7 +16,6 @@ export class UsersController extends ApplicationController {
       delete result.resetTokenSentAt
       delete result.resetToken
       delete result.resetTokenExpireAt
-      console.log(data)
       return res.status(201).send({ success: true, data: result,  message: 'Update successfully' })
     })
   }
