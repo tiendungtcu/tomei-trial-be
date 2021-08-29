@@ -18,11 +18,11 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    #- name: checkout
-    #  uses: tiendungtcu/tomei-trial-be@main
+    - name: checkout
+      uses: actions/checkout@v1
 
     - name: executing remote ssh commands using password
-      uses: tiendungtcu/tomei-trial-be@main
+      uses: ./
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
