@@ -24,10 +24,9 @@ jobs:
     - name: run scripts from remote host
       uses: tiendungtcu/tomei-trial-be@main
       with:
+        command: cd /var/www/html && /bin/sh ./deploy.sh
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        script: |
-            cd /var/www/html && /bin/sh ./deploy.sh
             
