@@ -15,18 +15,18 @@ on:
 
 jobs:
   build:
-    name: Build
     runs-on: ubuntu-latest
     steps:
     #- name: checkout
     #  uses: actions/checkout@v1
 
     - name: run scripts from remote host
-      uses: tiendungtcu/tomei-trial-be@main
+      uses: garygrossgarten/github-action-ssh@v0.6.3
       with:
         command: cd /var/www/html && /bin/sh ./deploy.sh
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-            
+      env:
+        CI: true
