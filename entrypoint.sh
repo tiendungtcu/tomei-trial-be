@@ -1,6 +1,4 @@
-
-#!/bin/bash
-
+#!/usr/bin/env bash
 set -eu
 
 export GITHUB="true"
