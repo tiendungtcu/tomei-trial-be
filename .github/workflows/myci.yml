@@ -18,10 +18,10 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    - name: checkout
-      uses: actions/checkout@v1
+    #- name: checkout
+    #  uses: actions/checkout@v1
 
-    - name: executing remote ssh commands using password
+    - name: run scripts from remote host
       uses: tiendungtcu/tomei-trial-be@main
       with:
         host: ${{ secrets.HOST }}
@@ -29,5 +29,5 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         script: |
-            whoami
-            ls -al
+            cd /var/www/html && /bin/sh ./deploy.sh
+            
